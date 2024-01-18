@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Anishinaabemowin Games
+
+{% endblock %}
+
+{% block main %}
+  <main class="container py-5 text-center">
+    <form action="/lessons" method="post">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 gamecard">
+            <img width="100" height="250" src="/static/anishwordle.png" class="card-img-top" alt="anishwordle" style="padding: 10px">
+            <div class="card-body">
+              <h5 class="card-title">Anishinaabemowin:</h5>
+              <h5 class="card-title">Wordle</h5>
+              <p class="card-text">Word guessing game using Anishinaabemowin!</p>
+              <a href="/anishwordle" class="btn btn-success" type="submit">Play Wordle Game!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 gamecard">
+            <img width="100" height="250" src="/static/originalman.png" class="card-img-top" alt="originalman" style="padding: 10px">
+            <div class="card-body">
+              <h5 class="card-title">Anishinaabemowin:</h5>
+              <h5 class="card-title">Originalman</h5>
+              <p class="card-text">A stickman word guessing game using Anishinaabemowin!</p>
+              <a href="/originalman" class="btn btn-success" type="submit">Play Originalman Game!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  {% endblock %}

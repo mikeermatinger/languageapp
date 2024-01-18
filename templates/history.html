@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    History
+
+{% endblock %}
+
+{% block main %}
+  <main class="container py-5 text-center">
+    <h1 class="rewards">Learning History</h1>
+    <table class="learninghistory table border-0">
+      <thead>
+        <tr class="languagetable border-0">
+          <th class="text-center">Transaction#</th>
+          <th class="text-start">Learning Type</th>
+          <th class="text-start">Learning Module</th>
+          <th class="text-center">Points Acquired</th>
+          <th class="text-center">Ziizbaakdoons Spent</th>
+          <th class="text-center">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody name="transactions">
+        {% for row in transactions %}
+        <tr class="transactiontable border-0">
+          <td class="text-center">{{ row[1] }}</td>
+          <td class="text-start">{{ row[2] }}</td>
+          <td class="text-start">{{ row[3] }}</td>
+          <td class="text-center">{{ row[4] }}</td>
+          <td class="text-center">{{ row[5] }}</td>
+          <td class="text-center">{{ row[6] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Rewards
+
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <form action="/rewards" method="post">
+        <div class="mb-3">
+            <p class="rewards">You have {{ user_rewards }} Reward points!</p>
+            <p class="balance">Redeem points for Ziizbaakdoons, Trade Ziizbaakdoons for stuff!</p>
+            <p class="redeem">'redeem points for Ziizbaakdoons below'</p>
+        </div>
+        <div class="mb-3">
+          <input class="form-control mx-auto w-auto" autofucus name="points" placeholder="# of points" type="number" step="10" min="10" required>
+        </div>
+        <button class="btn btn-success" type="submit">Redeem</button>
+        <br></br>
+        <div class="mb-3">
+            <p class="rewards">You have {{ ziizbaakdoons }} Ziizbaakdoons to trade for stuff!</p>
+        </div>
+    </form>
+    <form action="/rewards" method="post">
+      <div class="kitscontainer">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/hairfeatherkit.jpg" class="card-img-top" alt="hairfeatherkit" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Hair Feather Kit</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="hairfeather" id="hairfeather" class="btn btn-success form-control" type="submit" value="Trade for 100 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/native-american-women-dress-kits/hair-feather-kit">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/medicinebags.jpg" class="card-img-top" alt="medicinebags" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Parfleche Medicine Bag Kit</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="medicinebag" id="medicinebag" class="btn btn-success form-control" type="submit" value="Trade for 100 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/native-american-leather-kits/parfleche-medicine-bag-kit/">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/dreamcatcher.jpeg" class="card-img-top" alt="anishwordle" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Dream Catcher Kit - 6"</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="dreamcatcher" id="dreamcatcher" class="btn btn-success form-control" type="submit" value="Trade for 100 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/native-american-dream-catcher-kits/6in-gold-buckskin-dream-catcher-kits">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/dancestick.jpeg" class="card-img-top" alt="anishwordle" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Deluxe Dancestick Kit</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="dancestick" id="dancestick" class="btn btn-success form-control" type="submit" value="Trade for 200 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/native-american-mens-clothing-kits/deluxe-dance-staff-kit">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/beadworkstarter.jpeg" class="card-img-top" alt="anishwordle" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Beadwork Starter Kit</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="beadworkstarter" id="beadworkstarter" class="btn btn-success form-control" type="submit" value="Trade for 200 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/beadwork-starter-kit">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 gamecard">
+              <img width="100" height="250" src="/static/beadloom.jpeg" class="card-img-top" alt="beadloom" style="padding: 10px">
+              <div class="card-body">
+                <h5 class="card-title">Wire Bead Loom Kit</h5>
+                <h5 class="card-text">Miinwaa</h5>
+                <p class="card-text"><a href="https://www.facebook.com/saulttribeARC/">free tutorial here!</a></p>
+                <input name="beadloom" id="beadloom" class="btn btn-success form-control" type="submit" value="Trade for 200 Ziisbaakdoons"></input>
+                <p class="pt-3">Order kit @ <a href="https://www.crazycrow.com/native-american-beading-kits/wire-bead-loom-kit">crazycrow.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </form>
+</main>
+
+  {% endblock %}

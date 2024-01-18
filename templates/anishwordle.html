@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Anishinaabemowin Not Wordle
+
+{% endblock %}
+
+{% block main %}
+    <div class="gamecontainer">
+      <h3 style="text-align:center">Anishinaabemowin 'Not Wordle'</h3>
+      <h4 style="text-align:center">Type your first word guess to begin</h4>
+      <div id="game"></div>
+      <script src="{{url_for('static', filename='index.js')}}" type="module"></script>
+    </div>
+{% endblock %}

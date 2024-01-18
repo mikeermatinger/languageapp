@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Original Man
+
+{% endblock %}
+
+{% block main %}
+
+  <body>
+    <div class="gamecontainer">
+      <h3 style="text-align:center">Anishinaabemowin: Originalman</h3>
+      <h5 style="text-align:center">Help Original Man name everything on Earth!</h5>
+      <canvas id="canvas"></canvas>
+      <p></p>
+      <div id="letter-gamecontainer" class="letter-gamecontainer hide"></div>
+      <div id="user-input-section"></div>
+      <div id="options-gamecontainer"></div>
+      <p class="instructions">Excerpt from 'The Mishomis Book': Original Man was placed on earth by the Creator. He was given instructions to walk the earth and name all of the animals, the plants, the hills, and the valleys.</p>
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <button id="new-game-button">New Game</button>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='originalmanindex.js')}}"></script>
+  </body>
+  {% endblock %}
